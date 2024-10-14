@@ -44,5 +44,4 @@ public class ProblemController {
             problemService.updateProblem(l_id, notes, status);
         }
 
-
 }
