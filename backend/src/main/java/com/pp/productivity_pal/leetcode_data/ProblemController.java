@@ -2,6 +2,7 @@ package com.pp.productivity_pal.leetcode_data;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +22,7 @@ public class ProblemController {
     public ProblemController(ProblemService problemService) {
         this.problemService = problemService;
     }
-
+    @CrossOrigin(origins= "*")
     @GetMapping
     public List<Problem> leetcodeproblems() {
         return problemService.getProblems();
