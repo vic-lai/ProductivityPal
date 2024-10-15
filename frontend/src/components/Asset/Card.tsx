@@ -163,8 +163,8 @@ const Card: React.FC<CardProps> = ({problem, setProblems}) => {
                     <label className="inputLabel">Notes</label>
                     <textarea {...register("notes")} style={{ resize:'none'}} defaultValue={problem.notes} className="inputClass h-20"/>
                     <div className="flex justify-center gap-5 sm:gap-24">
-                        <button type="submit" className="inputBtn w-1/3 md:w-1/5">Update</button>
-                        <button onClick={closeUpdate} className="inputBtn w-1/5 w-1/3 md:w-1/5">Cancel</button>
+                        <button type="submit" className="inputBtn w-1/3 md:w-1/5 border-emerald-600 bg-emerald-600">Update</button>
+                        <button onClick={closeUpdate} className="inputBtn w-1/5 w-1/3 md:w-1/5 border-emerald-600 bg-emerald-600">Cancel</button>
                     </div>
                 </form>
             </Modal>

@@ -94,14 +94,14 @@ const Leetcode = (): JSX.Element => {
     return (
         <div className="text-black-400 text-xl font-bold bg-emerald-600 h-full"> 
             <div className="flex justify-center items-center">
-                <p className="border-b border-gray-500 font-body p-2 text-4xl">Leetcode</p>
+                <p className="border-b border-black font-body p-2 text-4xl">Leetcode</p>
                 <img src={leetcodeIcon} className="w-9 h-9" ></img>
             </div>
 
             <div className="flex justify-center">
-                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 ${showToDo=== true ? 'bg-emerald-700' : 'bg-white'}`} onClick={handleToDo}>To-Do</button>
-                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 ${showAttempted === true ? 'bg-emerald-700' : 'bg-white'}`} onClick={handleAttempted}>Attempted</button>
-                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 ${showCompleted === true ? 'bg-emerald-700' : 'bg-white'}`} onClick={handleCompleted}>Completed</button>
+                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showToDo=== true ? 'bg-emerald-700' : 'bg-white'}`} onClick={handleToDo}>To-Do</button>
+                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showAttempted === true ? 'bg-emerald-700' : 'bg-white'}`} onClick={handleAttempted}>Attempted</button>
+                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showCompleted === true ? 'bg-emerald-700' : 'bg-white'}`} onClick={handleCompleted}>Completed</button>
             </div>
             
             {showToDo &&
@@ -182,8 +182,8 @@ const Leetcode = (): JSX.Element => {
                     <label className="inputLabel">Notes</label>
                     <textarea {...register("notes")} style={{ resize:'none'}}  className="inputClass h-20"/>
                     <div className="flex justify-center gap-5 sm:gap-24">
-                        <button type="submit" className="inputBtn w-1/3 md:w-1/5">Create</button>
-                        <button onClick={closeModal} className="inputBtn w-1/5 w-1/3 md:w-1/5">Cancel</button>
+                        <button type="submit" className="inputBtn w-1/3 md:w-1/5 border-emerald-600 bg-emerald-600">Create</button>
+                        <button onClick={closeModal} className="inputBtn w-1/5 w-1/3 md:w-1/5 border-emerald-600 bg-emerald-600">Cancel</button>
                     </div>
                 </form>
             </Modal>
