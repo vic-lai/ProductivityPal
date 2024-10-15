@@ -92,7 +92,7 @@ const Leetcode = (): JSX.Element => {
     }
     
     return (
-        <div className="text-black-400 text-xl font-bold"> 
+        <div className="text-black-400 text-xl font-bold bg-emerald-600 h-full"> 
             <div className="flex justify-center items-center">
                 <p className="border-b border-gray-500 font-body p-2 text-4xl">Leetcode</p>
                 <img src={leetcodeIcon} className="w-9 h-9" ></img>
@@ -182,7 +182,7 @@ const Leetcode = (): JSX.Element => {
                     <label className="inputLabel">Notes</label>
                     <textarea {...register("notes")} style={{ resize:'none'}}  className="inputClass h-20"/>
                     <div className="flex justify-center gap-5 sm:gap-24">
-                        <button type="submit" className="inputBtn w-1/3 md:w-1/5">Update</button>
+                        <button type="submit" className="inputBtn w-1/3 md:w-1/5">Create</button>
                         <button onClick={closeModal} className="inputBtn w-1/5 w-1/3 md:w-1/5">Cancel</button>
                     </div>
                 </form>
