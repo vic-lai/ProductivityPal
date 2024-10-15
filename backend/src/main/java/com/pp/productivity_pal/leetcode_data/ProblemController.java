@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins= "*")
 @RequestMapping(path="api/v1/leetcodeproblems")
 public class ProblemController {
 
@@ -22,27 +23,32 @@ public class ProblemController {
     public ProblemController(ProblemService problemService) {
         this.problemService = problemService;
     }
-    @CrossOrigin(origins= "*")
     @GetMapping
     public List<Problem> leetcodeproblems() {
         return problemService.getProblems();
 	}
 
     @PostMapping
-    public void addNewProblem(@RequestBody Problem problem) {
+    public Problem addNewProblem(@RequestBody Problem problem) {
         problemService.addNewProblem(problem);
+        return problem;
     }
 
-    @DeleteMapping(path = "{l_id}")
-    public void deleteProblem(@PathVariable("l_id") Long l_id) {
-        problemService.deleteProblem(l_id);
+    @DeleteMapping(path = "{id}")
+    public List<Problem> deleteProblem(@PathVariable("id") Long id) {
+        problemService.deleteProblem(id);
+        return problemService.getProblems();
     }
 
-    @PutMapping(path = "{l_id}")
-    public void updateProblem(@PathVariable("l_id") Long l_id,
+    @PutMapping(path = "{id}")
+    public List<Problem> updateProblem(@PathVariable("id") Long id,
         @RequestParam(required = false) String notes,
-        @RequestParam(required = false) String status) {
-            problemService.updateProblem(l_id, notes, status);
+        @RequestParam(required = false) String status,
+        @RequestParam(required = false) String difficulty,
+        @RequestParam(required = false) String name,
+        @RequestParam(required = false) String link,
+        @RequestParam(required = false) String type) {
+            problemService.updateProblem(id, notes, status, difficulty, name, link, type);
+            return problemService.getProblems();
         }
-
 }

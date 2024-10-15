@@ -20,7 +20,7 @@ public class Problem {
         strategy = GenerationType.SEQUENCE,
         generator = "problem_sequence"
     )
-    private long l_id;
+    private long id;
     private String difficulty;
     private String name;
     private String notes;
@@ -40,8 +40,8 @@ public class Problem {
         this.link = link;
     }
 
-    public Problem(long l_id, String difficulty, String name, String notes, String type, String status, String link) {
-        this.l_id = l_id;
+    public Problem(long id, String difficulty, String name, String notes, String type, String status, String link) {
+        this.id = id;
         this.difficulty = difficulty;
         this.name = name;
         this.notes = notes;
@@ -51,11 +51,11 @@ public class Problem {
     }
 
 
-    public long getL_id() {
-        return l_id;
+    public long getid() {
+        return id;
     }
-    public void setL_id(long l_id) {
-        this.l_id = l_id;
+    public void setid(long id) {
+        this.id = id;
     }
     public String getDifficulty() {
         return difficulty;
@@ -96,7 +96,7 @@ public class Problem {
 
     @Override
     public String toString() {
-        return "Problem [l_id=" + l_id + ", difficulty=" + difficulty + ", name=" + name + ", notes=" + notes
+        return "Problem [id=" + id + ", difficulty=" + difficulty + ", name=" + name + ", notes=" + notes
                 + ", type=" + type + ", status=" + status + ", link=" + link + "]";
     }
 

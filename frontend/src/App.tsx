@@ -4,7 +4,7 @@ import './styles.css'
 import Navbar from './components/Asset/Navbar';
 import Leetcode from './components/Pages/Leetcode';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="flex flex-col h-screen">
       <div>

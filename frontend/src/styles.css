@@ -3,3 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inputClass{
+    @apply p-2 border rounded-2xl lg:ml-20 lg:mr-20;
+}
+
+.inputLabel {
+    @apply lg:ml-24 font-body text-lg;
+}
+
+.inputBtn {
+    @apply font-body border-2 border-emerald-600 bg-emerald-600 p-2 rounded-3xl font-bold border-4 text-xl hover:scale-110 transition ease-out duration-300
+}
