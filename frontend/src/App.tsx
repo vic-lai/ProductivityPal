@@ -4,6 +4,7 @@ import './styles.css'
 import Navbar from './components/Asset/Navbar';
 import Leetcode from './components/Pages/Leetcode';
 import Home from './components/Pages/Home';
+import Jobs from './components/Pages/Jobs';
 
 function App(): JSX.Element {
   return (
@@ -16,6 +17,7 @@ function App(): JSX.Element {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/leetcode" element={<Leetcode />} />
+            <Route path="/jobs" element={<Jobs />} />
           </Routes>
       </div>
     </div>
