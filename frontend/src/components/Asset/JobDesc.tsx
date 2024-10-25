@@ -105,7 +105,7 @@ const JobDesc: React.FC<JobProps> = ({job, setJobs}) => {
                 </div>
             </Modal>
             <Modal ariaHideApp={false} isOpen={update} onRequestClose={closeUpdate} className="flex flex-col justify-center w-10/12 bg-gray-500 rounded-2xl h-5/6" overlayClassName="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
-                <p className="text-3xl font-body text-center font-bold">Add Job Application</p>
+                <p className="text-3xl font-body text-center font-bold">Update Job Application</p>
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-10/12 sm:w-11/12 gap-4 ml-10">
                     <label className="inputLabel">Job Title</label>
                     <input {...register("jobTitle", { required: true })} defaultValue={jobTitle} autoComplete="off" className="inputClass" />
@@ -124,7 +124,7 @@ const JobDesc: React.FC<JobProps> = ({job, setJobs}) => {
                     </select>
                     {errors.status && <span className="inputLabel text-red-700 font-bold">Please select a status</span>}
                     
-                    <label className="inputLabel">date</label>
+                    <label className="inputLabel">Date</label>
                     <input type="date" {...register("date", { required: true })} defaultValue={date} className="inputClass" />
                     {errors.date && <span className="inputLabel text-red-700 font-bold">Please select a date</span>}
                     

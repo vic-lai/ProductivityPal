@@ -57,7 +57,7 @@ const Jobs = (): JSX.Element => {
 
     useEffect(() => {
         const appliedList = jobs.filter((job) => job.status === "Applied")
-        const inProgressList = jobs.filter((job) => job.status === "InProgress")
+        const inProgressList = jobs.filter((job) => job.status === "In Progress")
         const rejectedList = jobs.filter((job) => job.status === "Rejected")
         const acceptedList = jobs.filter((job) => job.status === "Accepted")
         setApplied(appliedList)
@@ -108,7 +108,7 @@ const Jobs = (): JSX.Element => {
             </div>
             <div className="flex justify-center">
                 <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showApplied=== true ? 'bg-sky-700' : 'bg-white'}`} onClick={handleApplied}>Applied</button>
-                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showInProgress=== true ? 'bg-sky-700' : 'bg-white'}`} onClick={handleInProgress}>Interview</button>
+                <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showInProgress=== true ? 'bg-sky-700' : 'bg-white'}`} onClick={handleInProgress}>In Progress</button>
                 <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showRejected=== true ? 'bg-sky-700' : 'bg-white'}`} onClick={handleRejected}>Rejected</button>
                 <button className={`rounded-3xl p-2 m-2 border-2 border-black transition ease-in duration-500 min-w-[120px] ${showAccepted=== true ? 'bg-sky-700' : 'bg-white'}`} onClick={handleAccepted}>Accepted</button>
             </div>

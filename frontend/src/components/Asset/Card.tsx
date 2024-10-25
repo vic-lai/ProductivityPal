@@ -89,7 +89,7 @@ const Card: React.FC<CardProps> = ({problem, setProblems}) => {
     return (
         <div>
             <ReactCardFlip isFlipped={isFlipped} key={problem.id}>
-                <div className="bg-white shadow:sm rounded m-5 text-center hover:shadow-lg relative pb-10 backface-hidden min-h-[140px]" onClick={handleFlip}>
+                <div className="bg-white shadow:sm rounded m-5 text-center hover:shadow-lg relative pb-10 backface-hidden min-h-[140px] cursor-pointer " onClick={handleFlip}>
                     <p className="p-4 font-body text-3xl">{name}</p>
                     <p className="font-body">{type}</p>
                     <div className={`${difficultyClass} ${baseClass}`}>
